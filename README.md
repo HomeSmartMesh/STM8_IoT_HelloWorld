@@ -1,10 +1,10 @@
-# STM8_IoT_HelloWorld
+# STM8 IoT HelloWorld
 First versions of the IoT Node Hello world samples
 The IoT node is an STM8 based low cost development platform.
 It is an initiative for an open product = open hardware + open source project.
 find all the details in this link :
 http://www.homesmartmesh.com/mediawiki/index.php/IoT_Node
-This project will be incremented gradually to cover hollohello world samples for :
+This project will be incremented gradually to cover hello world samples for :
  - Radio transceiver module
  - Weather sensors : temperature, humidity, air quality.
  - RGB Leds
