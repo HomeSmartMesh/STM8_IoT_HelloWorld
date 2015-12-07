@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\01_HelloLed\01_HelloLed.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\02_HelloUart\02_HelloUart.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\04_HelloRF_NordicAPI\04_HelloRF_NordicAPI.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\05_Hello_RGBLeds\05_Hello_RGBLeds.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\06_RGBLeds_24bitParam\06_Hello_RGBLeds_24BitsParam.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\07_Hello_Temperature\07_Hello_Temperature.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+
