@@ -1,0 +1,24 @@
+_________________________
+STM8 Receiver, Node 2
+Config updated with : 0x73 ; reread 0x73 ; STATUS: 0x40 : Data Ready i; Rx Pipe Nb 0x00 ;
+Clearing the status, New STATUS: 0x00 : Rx Pipe Nb 0x00 ;
+SetMode_Rx: Config updated with : 0x73 ; reread 0x73 ; STATUS: 0x00 : Rx Pipe Nb 0x00 ;
+Rx counter loop: 0x01 ; CONFIG: 0x73 ; STATUS: 0x00 : Rx Pipe Nb 0x00 ;
+Rx counter loop: 0x02 ; CONFIG: 0x73 ; STATUS: 0x00 : Rx Pipe Nb 0x00 ;
+Rx counter loop: 0x03 ; CONFIG: 0x73 ; STATUS: 0x40 : Data Ready i; Rx Pipe Nb 0x00 ;
+Received Data: 0xF2
+Clearing the status, New STATUS: 0x00 : Rx Pipe Nb 0x00 ;
+FifoStatus: 0x10
+Data still in Fifo: 0x10
+Received more Data: 0xF3
+Rx counter loop: 0x04 ; CONFIG: 0x73 ; STATUS: 0x0E :
+Rx counter loop: 0x05 ; CONFIG: 0x73 ; STATUS: 0x0E :
+Rx counter loop: 0x06 ; CONFIG: 0x73 ; STATUS: 0x0E :
+Rx counter loop: 0x07 ; CONFIG: 0x73 ; STATUS: 0x0E :
+Rx counter loop: 0x08 ; CONFIG: 0x73 ; STATUS: 0x40 : Data Ready i; Rx Pipe Nb 0x00 ;
+Received Data: 0xF4
+Clearing the status, New STATUS: 0x0E :
+FifoStatus: 0x11
+Rx counter loop: 0x09 ; CONFIG: 0x73 ; STATUS: 0x0E :
+Rx counter loop: 0x0A ; CONFIG: 0x73 ; STATUS: 0x0E :
+Rx counter loop: 0x0B ; CONFIG: 0x73 ; STATUS: 0x0E :

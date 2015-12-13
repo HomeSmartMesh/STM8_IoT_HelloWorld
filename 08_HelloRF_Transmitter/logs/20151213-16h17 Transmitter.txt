@@ -1,0 +1,14 @@
+_________________________
+STM8 Transmitter, Node 1
+Config updated: STATUS: Max Ret i; Rx Pipe Nb 0x06 ; TX Fifo Full;
+Clearing the status
+New STATUS: Rx Pipe not used ;
+SetMode_Tx: STATUS: Max Ret i; Rx Pipe Nb 0x06 ; TX Fifo Full;
+Tx: 0x01 ; STATUS: Rx Pipe not used ;
+CONFIG: 0x70
+Tx: 0x02 ; STATUS: Rx Pipe not used ;
+CONFIG: 0x70
+Tx: 0x03 ; STATUS: Rx Pipe not used ;
+CONFIG: 0x70
+Tx: 0x04 ; STATUS: Rx Pipe not used ;
+CONFIG: 0x70

@@ -1,0 +1,29 @@
+_________________________
+STM8 Transmitter, Node 1
+Config updated with : 0x70 ; reread 0x70 ; STATUS: 0x0E :
+SetMode_Tx: Config updated with : 0x72 ; reread 0x72 ; STATUS: 0x0E :
+Transmitting: 0x01 ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x02 ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x03 ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x04 ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x05 ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x06 ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x07 ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x08 ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x09 ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x0A ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x0B ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x0C ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;
+Clearing the status, New STATUS: 0x0E :
+Transmitting: 0x0D ; CONFIG: 0x72 ; STATUS: 0x2E : Data Sent i;

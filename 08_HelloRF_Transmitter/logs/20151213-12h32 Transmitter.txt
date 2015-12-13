@@ -1,0 +1,20 @@
+_________________________
+STM8 Trandmitter, Node 1
+Stauts = 0x1D
+Tx: 0x01 ; STATUS: 0x0E
+Tx: 0x02 ; STATUS: 0x0E
+Tx: 0x03 ; STATUS: 0x0E
+Tx: 0x04 ; STATUS: 0x0F
+Tx: 0x05 ; STATUS: 0x0F
+Tx: 0x06 ; STATUS: 0x0F
+
+_________________________
+STM8 Trandmitter, Node 1
+Stauts = 0x1D				0001 1101	MAX_RT ; RX_P_NO(not used) ; TX_FULL
+Tx: 0x01 ; STATUS: 0x0E		0000 1110	RX_P_NO(RX fifo empty)
+Tx: 0x02 ; STATUS: 0x0E		0000 1110
+Tx: 0x03 ; STATUS: 0x0E		0000 1110
+Tx: 0x04 ; STATUS: 0x0F		0000 1111	RX_P_NO(RX fifo empty) ; TX_FULL
+Tx: 0x05 ; STATUS: 0x0F		0000 1111
+Tx: 0x06 ; STATUS: 0x0F		0000 1111
+
