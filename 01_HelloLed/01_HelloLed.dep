@@ -6,21 +6,12 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
-      <file>$PROJ_DIR$\hello_led.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\hello_led.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\hello_led.pbi</file>
       <file>$PROJ_DIR$\Debug\Exe\01_HelloLed.hex</file>
+      <file>$PROJ_DIR$\Debug\Obj\hello_led.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\hello_led.o</file>
+      <file>$PROJ_DIR$\hello_led.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
     </outputs>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\templproj.out</name>
-      <outputs>
-        <tool>
-          <name>OBJCOPY</name>
-          <file> 4</file>
-        </tool>
-      </outputs>
-    </file>
     <file>
       <name>$PROJ_DIR$\hello_led.c</name>
       <outputs>
@@ -30,7 +21,16 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 3</file>
+          <file> 1</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\templproj.out</name>
+      <outputs>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 0</file>
         </tool>
       </outputs>
     </file>
@@ -39,7 +39,7 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 0</file>
+          <file> 4</file>
         </tool>
       </outputs>
     </file>

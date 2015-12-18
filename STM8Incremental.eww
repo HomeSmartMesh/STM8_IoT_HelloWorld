@@ -19,6 +19,15 @@
   <project>
     <path>$WS_DIR$\07_Hello_Temperature\07_Hello_Temperature.ewp</path>
   </project>
+  <project>
+    <path>$WS_DIR$\08_HelloRF_Transmitter\08_HelloRF_Transmitter.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\09_HelloRF_Receiver\09_HelloRF_Receiver.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\10_HelloRF_Receiver_IRQ\10_Hello_Receiver_IRQ.ewp</path>
+  </project>
   <batchBuild/>
 </workspace>
 

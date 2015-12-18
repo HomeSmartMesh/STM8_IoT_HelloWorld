@@ -5,7 +5,7 @@
     
     
     
-  <CurrentConfigs><Project>01_HelloLed/Debug</Project><Project>02_HelloUart/Debug</Project><Project>04_HelloRF_NordicAPI/Debug</Project><Project>05_Hello_RGBLeds/Debug</Project><Project>06_Hello_RGBLeds_24BitsParam/Debug</Project><Project>07_Hello_Temperature/Debug</Project></CurrentConfigs><CurrentProj>06_Hello_RGBLeds_24BitsParam</CurrentProj><OverviewSelected>1</OverviewSelected></ConfigDictionary>
+  <CurrentConfigs><Project>08_HelloRF_Transmitter/Debug</Project><Project>09_HelloRF_Receiver/Debug</Project><Project>10_Hello_Receiver_IRQ/Debug</Project><Project>02_HelloUart/Debug</Project><Project>01_HelloLed/Debug</Project><Project>04_HelloRF_NordicAPI/Debug</Project><Project>05_Hello_RGBLeds/Debug</Project><Project>06_Hello_RGBLeds_24BitsParam/Debug</Project><Project>07_Hello_Temperature/Debug</Project></CurrentConfigs><CurrentProj>10_Hello_Receiver_IRQ</CurrentProj><OverviewSelected>1</OverviewSelected></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
@@ -14,7 +14,7 @@
           
           
           
-        <Column0>372</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>380</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <DRIVER_CUSTOM_SFR>
         <PreferedWindows>
@@ -51,7 +51,7 @@
     <Windows>
       
       
-    <Wnd0>
+    <Wnd2>
         <Tabs>
           <Tab>
             <Identity>TabID-20022-13141</Identity>
@@ -59,11 +59,11 @@
             <Factory>Workspace</Factory>
             <Session>
               
-            <NodeDict><ExpandedNode>&lt;ws&gt;</ExpandedNode><ExpandedNode>&lt;ws&gt;/01_HelloLed</ExpandedNode><ExpandedNode>&lt;ws&gt;/03_HelloRF</ExpandedNode><ExpandedNode>&lt;ws&gt;/03_HelloRF/Peripherals</ExpandedNode><ExpandedNode>&lt;ws&gt;/03_HelloRF/STM8S_Peripherals</ExpandedNode><ExpandedNode>&lt;ws&gt;/04_HelloRF_NordicAPI</ExpandedNode><ExpandedNode>&lt;ws&gt;/05_Hello_RGBLeds</ExpandedNode><ExpandedNode>&lt;ws&gt;/06_Hello_RGBLeds_24BitsParam</ExpandedNode></NodeDict></Session>
+            <NodeDict><ExpandedNode>&lt;ws&gt;</ExpandedNode><ExpandedNode>&lt;ws&gt;/03_HelloRF</ExpandedNode><ExpandedNode>&lt;ws&gt;/03_HelloRF/Peripherals</ExpandedNode><ExpandedNode>&lt;ws&gt;/03_HelloRF/STM8S_Peripherals</ExpandedNode><ExpandedNode>&lt;ws&gt;/10_Hello_Receiver_IRQ</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
         <Tabs>
           <Tab>
             <Identity>TabID-5887-16681</Identity>
@@ -73,20 +73,20 @@
           </Tab>
         <Tab><Identity>TabID-21996-22152</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\stm8\inc\iostm8s103f3.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>2005</YPos2><SelStart2>68750</SelStart2><SelEnd2>68761</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\04_HelloRF_NordicAPI\nRF_SPI.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>3630</SelStart2><SelEnd2>3647</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\04_HelloRF_NordicAPI\nRF_SPI.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>95</YPos2><SelStart2>3568</SelStart2><SelEnd2>3568</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\04_HelloRF_NordicAPI\nRF_LowLevel.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>53</YPos2><SelStart2>1198</SelStart2><SelEnd2>1198</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\04_HelloRF_NordicAPI\ClockUartLed.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>271</SelStart2><SelEnd2>271</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\04_HelloRF_NordicAPI\ClockUartLed.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>127</YPos2><SelStart2>3789</SelStart2><SelEnd2>3789</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\04_HelloRF_NordicAPI\nRF_LowLevel.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>605</SelStart2><SelEnd2>605</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\04_HelloRF_NordicAPI\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>87</SelStart2><SelEnd2>87</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\05_Hello_RGBLeds\hello_leds.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>33</YPos2><SelStart2>0</SelStart2><SelEnd2>27</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\07_Hello_Temperature\hello_Temperature.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>126</YPos2><SelStart2>4033</SelStart2><SelEnd2>4033</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\06_RGBLeds_24bitParam\hello_leds_24bits.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>412</YPos2><SelStart2>23188</SelStart2><SelEnd2>23188</SelEnd2></Tab><ActiveTab>10</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\07_Hello_Temperature\ClockUartLed.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>201</YPos2><SelStart2>3266</SelStart2><SelEnd2>3266</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\10_HelloRF_Receiver_IRQ\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>23</YPos2><SelStart2>528</SelStart2><SelEnd2>528</SelEnd2></Tab><ActiveTab>0</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-075F8600><key>iaridepm.enu1</key></Toolbar-075F8600></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>830</Bottom><Right>446</Right><x>-2</x><y>-2</y><xscreen>937</xscreen><yscreen>124</yscreen><sizeHorzCX>480020</sizeHorzCX><sizeHorzCY>121212</sizeHorzCY><sizeVertCX>229508</sizeVertCX><sizeVertCY>813294</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>148</Bottom><Right>1954</Right><x>-2</x><y>-2</y><xscreen>1956</xscreen><yscreen>150</yscreen><sizeHorzCX>1002049</sizeHorzCX><sizeHorzCY>146628</sizeHorzCY><sizeVertCX>480020</sizeVertCX><sizeVertCY>121212</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-048C8600><key>iaridepm.enu1</key></Toolbar-048C8600></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>825</Bottom><Right>454</Right><x>-2</x><y>-2</y><xscreen>954</xscreen><yscreen>123</yscreen><sizeHorzCX>479879</sizeHorzCX><sizeHorzCY>120944</sizeHorzCY><sizeVertCX>229376</sizeVertCX><sizeVertCY>813176</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>147</Bottom><Right>1990</Right><x>-2</x><y>-2</y><xscreen>1992</xscreen><yscreen>149</yscreen><sizeHorzCX>1002012</sizeHorzCX><sizeHorzCY>146509</sizeHorzCY><sizeVertCX>479879</sizeVertCX><sizeVertCY>120944</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

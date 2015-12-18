@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>2915703130</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\main_RxreadOnce.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_RegText.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main_RxreadOnce.o</file>
+      <file>$PROJ_DIR$\Debug\List\nRF_Tx.lst</file>
+      <file>$PROJ_DIR$\Debug\List\nRF_LowLevel.lst</file>
+      <file>$PROJ_DIR$\Debug\List\nRF_RegText.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_RegText.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_IRQ.o</file>
+      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\main.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_IRQ.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\ClockUartLed.lst</file>
+      <file>$PROJ_DIR$\Debug\List\nRF_IRQ.lst</file>
+      <file>$PROJ_DIR$\Debug\List\nRF_SPI.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_SPI.o</file>
+      <file>$PROJ_DIR$\Debug\List\nRF_Modes.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\10_Hello_Receiver_IRQ.out</file>
+      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_LowLevel.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_Tx.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_Modes.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_Modes.o</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_LowLevel.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\List\10_Hello_Receiver_IRQ.map</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\nRF_LowLevel.h</file>
+      <file>$PROJ_DIR$\nRF_Configuration.h</file>
+      <file>$PROJ_DIR$\ClockUartLed.h</file>
+      <file>$PROJ_DIR$\ClockUartLed.c</file>
+      <file>$PROJ_DIR$\commonTypes.h</file>
+      <file>$PROJ_DIR$\nRF_IRQ.c</file>
+      <file>$PROJ_DIR$\nRF_LowLevel.c</file>
+      <file>$PROJ_DIR$\nRF_Modes.h</file>
+      <file>$PROJ_DIR$\nRF_RegText.h</file>
+      <file>$PROJ_DIR$\nRF_Modes.c</file>
+      <file>$PROJ_DIR$\nRF_SPI.h</file>
+      <file>$PROJ_DIR$\main_RxreadOnce.c</file>
+      <file>$PROJ_DIR$\nRF_IRQ.h</file>
+      <file>$PROJ_DIR$\nRF_RegText.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\10_Hello_Receiver_IRQ.pbd</file>
+      <file>$PROJ_DIR$\nRF_SPI.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_Tx.pbi</file>
+      <file>$PROJ_DIR$\nRF_Tx.h</file>
+      <file>$PROJ_DIR$\nRF_Tx.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_SPI.pbi</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\10_Hello_Receiver_IRQ.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 31</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 0 20 30 10 29 27 9 18 25 1 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 13 30</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 35 43 37 40 50 41 45</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43 37 35 40 50 41 45</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ClockUartLed.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 15 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 35 23 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 35 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\nRF_IRQ.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 16 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 21 23 11 45 34 35 37 43 40 50 41</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 35 45 43 23 34 37 21 40 50 41</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\nRF_LowLevel.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 7 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 23 11 33 37</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 23 37 33</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\nRF_Modes.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 19 27</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 26</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 40 37 34 45 43 33 41 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 33 37 45 35 34 43 41 40</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_RxreadOnce.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 5</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 35 43 37 40 50 41</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43 37 35 40 50 41</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\nRF_RegText.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 8 9</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 41 37 43 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 37 43 41 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\nRF_SPI.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 17 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 43 37 33 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 35 33 37 43</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\nRF_Tx.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 6 25</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 50 37 40 43 35 33</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 33 43 37 40 35 50</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 22 31</file>
+        </tool>
+      </outputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

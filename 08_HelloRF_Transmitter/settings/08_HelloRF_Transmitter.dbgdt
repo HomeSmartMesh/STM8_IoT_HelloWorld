@@ -65,7 +65,7 @@
         <expressions>
           
           
-        <item>ConfigVal</item><item></item></expressions>
+        <item>ConfigVal</item><item/></expressions>
         <col-names>
           
           

@@ -7,45 +7,36 @@
     <name>Debug</name>
     <outputs>
       <file>$PROJ_DIR$\hello_leds.c</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\hello_leds.o</file>
-      <file>$PROJ_DIR$\Debug\Exe\05_Hello_RGBLeds.out</file>
       <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
+      <file>$PROJ_DIR$\Debug\Obj\hello_leds.o</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
       <file>$PROJ_DIR$\Debug\Obj\hello_leds.pbi</file>
       <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\05_Hello_RGBLeds.out</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
       <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
       <file>$PROJ_DIR$\Debug\Exe\05_Hello_RGBLeds.hex</file>
     </outputs>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 4</file>
-        </tool>
-      </outputs>
-    </file>
     <file>
       <name>$PROJ_DIR$\hello_leds.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 3</file>
+          <file> 2</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 6</file>
+          <file> 4</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 8 7</file>
+          <file> 8 5</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 7 8</file>
+          <file> 5 8</file>
         </tool>
       </inputs>
     </file>
@@ -60,9 +51,18 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 5 3 1 2</file>
+          <file> 1 2 7 3</file>
         </tool>
       </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
     </file>
   </configuration>
   <configuration>

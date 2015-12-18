@@ -6,18 +6,22 @@
   <configuration>
     <name>Debug</name>
     <outputs>
+      <file>$PROJ_DIR$\hello_uart.c</file>
       <file>$PROJ_DIR$\Debug\Obj\hello_uart.o</file>
       <file>$PROJ_DIR$\Debug\Obj\hello_uart.pbi</file>
-      <file>$PROJ_DIR$\Debug\Exe\02_HelloUart.hex</file>
       <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
-      <file>$PROJ_DIR$\hello_uart.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\02_HelloUart.hex</file>
     </outputs>
     <file>
-      <name>[ROOT_NODE]</name>
+      <name>$PROJ_DIR$\hello_uart.c</name>
       <outputs>
         <tool>
-          <name>ILINK</name>
-          <file> 3</file>
+          <name>ICCSTM8</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2</file>
         </tool>
       </outputs>
     </file>
@@ -26,20 +30,16 @@
       <outputs>
         <tool>
           <name>OBJCOPY</name>
-          <file> 2</file>
+          <file> 4</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\hello_uart.c</name>
+      <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
-          <name>ICCSTM8</name>
-          <file> 0</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 1</file>
+          <name>ILINK</name>
+          <file> 3</file>
         </tool>
       </outputs>
     </file>
