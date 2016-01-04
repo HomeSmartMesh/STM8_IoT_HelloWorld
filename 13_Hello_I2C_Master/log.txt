@@ -1,0 +1,95 @@
+_________________________
+STM8 I2C Master...
+I2C Transaction complete, received:
+0x55 5F
+master loop counter: 0x02
+I2C Transaction complete, received:
+0x55 60
+master loop counter: 0x03
+I2C Transaction complete, received:
+0x55 61
+master loop counter: 0x04
+I2C Transaction complete, received:
+0x55 61
+master loop counter: 0x05
+I2C Transaction complete, received:
+0x55 62
+master loop counter: 0x06
+I2C Transaction complete, received:
+0x55 63
+master loop counter: 0x07
+I2C Transaction complete, received:
+0x55 64
+master loop counter: 0x08
+I2C Transaction complete, received:
+0x55 65
+master loop counter: 0x09
+I2C Transaction complete, received:
+0x55 66
+master loop counter: 0x0A
+I2C Transaction complete, received:
+0x55 67
+master loop counter: 0x0B
+I2C Transaction complete, received:
+0x55 68
+master loop counter: 0x0C
+I2C Transaction complete, received:
+0x55 68
+master loop counter: 0x0D
+I2C Transaction complete, received:
+0x55 69
+master loop counter: 0x0E
+I2C Transaction complete, received:
+0x55 6A
+master loop counter: 0x0F
+I2C Transaction complete, received:
+0x55 6B
+master loop counter: 0x10
+I2C Transaction complete, received:
+0x55 6C
+master loop counter: 0x11
+I2C Transaction complete, received:
+0x55 6D
+master loop counter: 0x12
+Not TRA, no RXNE and not StopF !
+[I2C no Acknowledge]
+master loop counter: 0x13
+I2C Transaction complete, received:
+0x55 14
+master loop counter: 0x14
+I2C Transaction complete, received:
+0x55 15
+master loop counter: 0x15
+I2C Transaction complete, received:
+0x55 16
+master loop counter: 0x16
+I2C Transaction complete, received:
+0x55 17
+master loop counter: 0x17
+I2C Transaction complete, received:
+0x55 18
+master loop counter: 0x18
+I2C Transaction complete, received:
+0x55 18
+master loop counter: 0x19
+I2C Transaction complete, received:
+0x55 19
+master loop counter: 0x1A
+I2C Transaction complete, received:
+0x55 1A
+master loop counter: 0x1B
+I2C Transaction complete, received:
+0x55 1B
+master loop counter: 0x1C
+I2C Transaction complete, received:
+0x55 1C
+master loop counter: 0x1D
+I2C Transaction complete, received:
+0x55 1D
+master loop counter: 0x1E
+I2C Transaction complete, received:
+0x55 1E
+master loop counter: 0x1F
+I2C Transaction complete, received:
+0x55 1E
+master loop counter: 0x20

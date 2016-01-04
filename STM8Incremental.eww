@@ -28,6 +28,18 @@
   <project>
     <path>$WS_DIR$\10_HelloRF_Receiver_IRQ\10_Hello_Receiver_IRQ.ewp</path>
   </project>
+  <project>
+    <path>$WS_DIR$\11_HelloADC\11_HelloADC.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\12_Hello_AutoWakeUp\12_Hello_AutoWakeUp.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\13_Hello_I2C_Master\13_Hello_I2C_Master.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\14_Hello_I2C_Slave\14_Hello_I2C_Slave.ewp</path>
+  </project>
   <batchBuild/>
 </workspace>
 

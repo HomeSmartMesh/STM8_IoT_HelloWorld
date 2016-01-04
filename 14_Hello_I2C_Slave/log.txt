@@ -1,0 +1,51 @@
+_________________________
+STM8 I2C Slave...
+slave loop counter: 0x14
+I2C Slave Tx Complete :
+0x55 14
+slave loop counter: 0x15
+I2C Slave Tx Complete :
+0x55 15
+slave loop counter: 0x16
+I2C Slave Tx Complete :
+0x55 16
+slave loop counter: 0x17
+I2C Slave Tx Complete :
+0x55 17
+slave loop counter: 0x18
+I2C Slave Tx Complete :
+0x55 18
+I2C Slave Tx Complete :
+0x55 18
+slave loop counter: 0x19
+I2C Slave Tx Complete :
+0x55 19
+slave loop counter: 0x1A
+I2C Slave Tx Complete :
+0x55 1A
+slave loop counter: 0x1B
+I2C Slave Tx Complete :
+0x55 1B
+slave loop counter: 0x1C
+I2C Slave Tx Complete :
+0x55 1C
+slave loop counter: 0x1D
+I2C Slave Tx Complete :
+0x55 1D
+slave loop counter: 0x1E
+I2C Slave Tx Complete :
+0x55 1E
+I2C Slave Tx Complete :
+0x55 1E
+slave loop counter: 0x1F
+I2C Slave Tx Complete :
+0x55 1F
+slave loop counter: 0x20
+I2C Slave Tx Complete :
+0x55 20
+slave loop counter: 0x21
+I2C Slave Tx Complete :
+0x55 21
+slave loop counter: 0x22
+I2C Slave Tx Complete :
+0x55 22

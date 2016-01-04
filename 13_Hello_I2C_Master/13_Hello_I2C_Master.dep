@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>2768247121</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Master.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\13_Hello_I2C_Master.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Master.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\13_Hello_I2C_Master.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
+      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
+      <file>$TOOLKIT_DIR$\config\lnkstm8.icf</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+      <file>$PROJ_DIR$\i2c.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\i2c.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\i2c.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\13_Hello_I2C_Master.map</file>
+      <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
+      <file>$PROJ_DIR$\..\14_Hello_I2C_Slave\i2c.c</file>
+      <file>$PROJ_DIR$\ClockUartLed.h</file>
+      <file>$PROJ_DIR$\ClockUartLed.c</file>
+      <file>$PROJ_DIR$\main_i2c_Master.c</file>
+      <file>$PROJ_DIR$\commonTypes.h</file>
+      <file>$PROJ_DIR$\i2c.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\..\14_Hello_I2C_Slave\main_i2c_Slave.c</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\13_Hello_I2C_Master.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 15 4 12 3 9 10</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\i2c.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 17 20 21 7</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 21 20 17 6 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 1 14</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ClockUartLed.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 4</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7 17 6</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 17 6 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_i2c_Master.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 20 17 22 7 6</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 6 7 22 17 20 21</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
