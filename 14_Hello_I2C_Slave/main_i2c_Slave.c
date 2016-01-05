@@ -50,7 +50,7 @@ void i2c_user_Error_Callback(BYTE l_sr2)
 int main( void )
 {
     BYTE userData[2];
-    BYTE counter;
+    BYTE counter = 0;
     
     InitialiseSystemClock();
 

@@ -73,8 +73,6 @@
 // 9th bit is acknowledge from the slave
 void I2C_Init();
 
-void I2C_Slave_Configure(BYTE ownSlaveAddress, BYTE* buffer, BYTE size);
-
 #if(I2C_Use_Master == 1)
 void I2C_Transaction(BYTE read,BYTE slaveAddress, BYTE* buffer,BYTE count);
 
@@ -88,6 +86,8 @@ void i2c_user_Tx_Callback(BYTE *userdata,BYTE size);
 #endif
 
 #if(I2C_Use_Slave == 1)
+void I2C_Slave_Configure(BYTE ownSlaveAddress, BYTE* buffer, BYTE size);
+
 void i2c_user_Slave_Rx_Callback(BYTE *userdata,BYTE size);
 
 void i2c_user_Slave_Tx_Callback(BYTE *userdata,BYTE size);

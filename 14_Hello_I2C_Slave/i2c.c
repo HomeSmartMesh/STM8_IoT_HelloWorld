@@ -19,15 +19,14 @@
 
 struct i2c_s {
 	BYTE	SlaveAddress;
-	BYTE*	buffer;
-	BYTE	TransactionLength;
+	BYTE*	masterBuffer;
+	BYTE	masterTransactionLength;
 	BYTE	buffer_index;
         BYTE    reg;
-
+	BYTE	masterMode;
 	BYTE	readwrite;
-	
-	//Slave parameters
-	
+	BYTE*	slaveBuffer;
+	BYTE	slaveTransactionLength;
 	
 }i2c;
 
@@ -88,7 +87,7 @@ void I2C_Init()
 	I2C_ITR_ITERREN = 1;				//Error  Enables				: BERR, ARLO, AF, OVR
 
 	#if(I2C_Use_Slave == 1)				//As a slave, we start listening, so slave params must be available
-	i2c.TransactionLength = 0;			//if not configured, no data will be used and no read/write acknowledge
+	i2c.slaveTransactionLength = 0;			//if not configured, no data will be used and no read/write acknowledge
 	#endif
 	
 	
@@ -96,14 +95,17 @@ void I2C_Init()
 	I2C_CR1_PE = 1;						//Enable the I2C Peripheral
 }
 
+#if(I2C_Use_Slave == 1)
 void I2C_Slave_Configure(BYTE ownSlaveAddress, BYTE* buffer, BYTE size)
 {
 	I2C_OARL_ADD = ownSlaveAddress;	// in slave mode : the I2C_OARL_ADD is the already shifted part of I2C_OARL
-	i2c.buffer = buffer;
-	i2c.TransactionLength = size;
+	i2c.slaveBuffer = buffer;
+	i2c.slaveTransactionLength = size;
+	i2c.masterMode = 0;				//switch the state machine if, to the Slave mode
 	
 	I2C_CR2_ACK = 1;	//Acknowledge Enable : Acknowledge returned after a byte is received (matched address or data)
 }
+#endif
 
 #if(I2C_Use_Master == 1)
 void I2C_Transaction(BYTE read,BYTE slaveAddress, BYTE* buffer,BYTE count)
@@ -111,8 +113,9 @@ void I2C_Transaction(BYTE read,BYTE slaveAddress, BYTE* buffer,BYTE count)
 	i2c.readwrite = read;
 	i2c.SlaveAddress = slaveAddress;
 	i2c.buffer_index = 0;
-	i2c.buffer = buffer;
-	i2c.TransactionLength = count;
+	i2c.masterBuffer = buffer;
+	i2c.masterTransactionLength = count;
+	i2c.masterMode = 1;
 	
 	//wait for the Bus to get Free to avoid collisions
 	while(I2C_SR3_BUSY);
@@ -149,14 +152,13 @@ void I2C_Write(BYTE slaveAddress, BYTE* buffer,BYTE count)
 //#pragma vector = I2C_RXNE_vector	// all have same vector
 __interrupt void I2C_IRQ()
 {
-	//I2C_IRQ_Printf("(IRQ)\n\r");
+	if(i2c.masterMode)				//using soft flag not MSL because MSL is 0 when the master receives the last RxNE data that is 0
+	{
 	#if (I2C_Use_Master == 1)
 		if (I2C_SR1_SB)			//(SB) The Start Byte has been sent
 		{
 			i2c.reg = I2C_SR1;									//clear the start condition by reading SR1 then writing DR
 			I2C_DR = (i2c.SlaveAddress << 1) | i2c.readwrite;	//the slave address - read or write is set here
-			I2C_OARL_ADD = 0;
-			I2C_OARH_ADD = 0;
 		}
 		else if (I2C_SR1_ADDR)		//(ADDR) The Slave Address Has been sent
 		{
@@ -169,11 +171,11 @@ __interrupt void I2C_IRQ()
 				if (I2C_SR1_TXE)		//(TXE) Data Register Empty
 				{
 					
-					I2C_DR = i2c.buffer[i2c.buffer_index++];
-					if (i2c.buffer_index == i2c.TransactionLength)
+				I2C_DR = i2c.masterBuffer[i2c.buffer_index++];
+				if (i2c.buffer_index == i2c.masterTransactionLength)
 					{
 						I2C_CR2_STOP = 1;	//Generate Stop condition
-						i2c_user_Tx_Callback(i2c.buffer,i2c.TransactionLength);//Notify the user
+					i2c_user_Tx_Callback(i2c.masterBuffer,i2c.masterTransactionLength);//Notify the user
 					}
 				}
 			else if(!I2C_SR1_STOPF)//could only be a Stop Event then...
@@ -186,17 +188,23 @@ __interrupt void I2C_IRQ()
 		if (I2C_SR1_RXNE)		//(RXNE) Data Register Not empty
 					{
 			BYTE data = I2C_DR;
-			if(i2c.buffer_index < i2c.TransactionLength)
+				if(i2c.buffer_index < i2c.masterTransactionLength)
 				{
-					i2c.buffer[i2c.buffer_index] = data;
+					i2c.masterBuffer[i2c.buffer_index] = data;
 			}
-				if(i2c.buffer_index == (i2c.TransactionLength - 1))//The last byte is received
+				if(i2c.buffer_index == (i2c.masterTransactionLength - 1))//The last byte is received
 				{
 					I2C_CR2_ACK = 0;	//Nack during the last operation
 						I2C_CR2_STOP = 1;	//Generate a Stop condition
-						i2c_user_Rx_Callback(i2c.buffer,i2c.TransactionLength);//Notify the user
+					i2c_user_Rx_Callback(i2c.masterBuffer,i2c.masterTransactionLength);//Notify the user
+				}
+				//(no more data while rxNE = 1) This is EV7 from Figure 108 of the reference manual RM0016 in page 297
+				else if(i2c.buffer_index >= i2c.masterTransactionLength)//The last byte is received 
+				{
+					//The master mode is over
+					i2c.masterMode = 0;		//back to slave mode
+					I2C_CR2_ACK = 1;		//Slave mode listen with Acknowledge
 					}
-				//else (no more data while rxNE = 1) This is EV7 from Figure 108 of the reference manual RM0016 in page 297
 				i2c.buffer_index++;
 				}
 				else if(!I2C_SR1_STOPF)//could only be a Stop Event then...
@@ -205,6 +213,9 @@ __interrupt void I2C_IRQ()
 				}
 		}
 	#endif /*I2C_Use_Master*/
+	}
+	else						//(MSL = 0) we are in slave mode
+	{
 	#if (I2C_Use_Slave == 1)
 		if (I2C_SR1_ADDR)		//(ADDR) Our Slave Address has matched
 		{
@@ -215,13 +226,13 @@ __interrupt void I2C_IRQ()
 		}
 		else if(I2C_SR1_RXNE)		//(RXNE) Data Register Not empty
 		{
-			if(i2c.buffer_index < i2c.TransactionLength)//accept the received data
+			if(i2c.buffer_index < i2c.slaveTransactionLength)//accept the received data
 			{
-				i2c.buffer[i2c.buffer_index++] = I2C_DR;
+				i2c.slaveBuffer[i2c.buffer_index++] = I2C_DR;
 				I2C_CR2_ACK = 1;
-				if (i2c.buffer_index == i2c.TransactionLength)
+				if (i2c.buffer_index == i2c.slaveTransactionLength)
 				{
-					i2c_user_Slave_Rx_Callback(i2c.buffer,i2c.TransactionLength);//Notify the user
+					i2c_user_Slave_Rx_Callback(i2c.slaveBuffer,i2c.slaveTransactionLength);//Notify the user
 				}
 			}
 			else//cannot accept more than expected
@@ -233,14 +244,13 @@ __interrupt void I2C_IRQ()
 		//else we must be in transmission as we did not receive anything
 		else if (I2C_SR1_TXE)		//(TXE) Data Register Empty
 		{
-			if(i2c.buffer_index < i2c.TransactionLength)//accept to transmit data
+			if(i2c.buffer_index < i2c.slaveTransactionLength)//accept to transmit data
 			{
-				I2C_DR = i2c.buffer[i2c.buffer_index++];
-				if (i2c.buffer_index == i2c.TransactionLength)
+				I2C_DR = i2c.slaveBuffer[i2c.buffer_index++];
+				if (i2c.buffer_index == i2c.slaveTransactionLength)
 				{
-					i2c_user_Slave_Tx_Callback(i2c.buffer,i2c.TransactionLength);//Notify the user
+					i2c_user_Slave_Tx_Callback(i2c.slaveBuffer,i2c.slaveTransactionLength);//Notify the user
 				}
-	
 			}
 			else
 			{
@@ -248,6 +258,7 @@ __interrupt void I2C_IRQ()
 			}
 		}
 	#endif /*I2C_Use_Slave*/
+	}
 	
 	//in either cases, handle the stop notification
 	//reading SR1 register followed by a write in the CR2 register	

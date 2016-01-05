@@ -116,7 +116,7 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21 20 17 22 7 6</file>
+          <file> 21 17 22 20 7 6</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
