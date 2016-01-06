@@ -578,7 +578,7 @@
         </option>
         <option>
           <name>IlinkMapFile</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkLogFile</name>
@@ -1587,7 +1587,22 @@
     </settings>
   </configuration>
   <file>
+    <name>$PROJ_DIR$\ClockUartLed.c</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\ClockUartLed.h</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\commonTypes.h</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\hello_leds_24bits.c</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\WS2812B.c</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\WS2812B.h</name>
   </file>
 </project>
 

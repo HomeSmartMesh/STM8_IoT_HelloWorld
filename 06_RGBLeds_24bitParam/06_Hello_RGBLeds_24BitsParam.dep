@@ -2,62 +2,129 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>3653750715</fileChecksum>
+  <fileChecksum>2714232706</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
-      <file>$PROJ_DIR$\hello_leds_24bits.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\06_Hello_RGBLeds_24BitsParam.pbd</file>
-      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
-      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\hello_leds_24bits.o</file>
-      <file>$PROJ_DIR$\Debug\List\hello_leds_24bits.lst</file>
       <file>$PROJ_DIR$\Debug\Exe\06_Hello_RGBLeds_24BitsParam.out</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+      <file>$PROJ_DIR$\hello_leds_24bits.c</file>
       <file>$PROJ_DIR$\Debug\Obj\hello_leds_24bits.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
+      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
+      <file>$PROJ_DIR$\Debug\List\hello_leds_24bits.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\hello_leds_24bits.o</file>
       <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
       <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$PROJ_DIR$\ClockUartLed.h</file>
+      <file>$PROJ_DIR$\commonTypes.h</file>
+      <file>$PROJ_DIR$\Debug\List\06_Hello_RGBLeds_24BitsParam.map</file>
+      <file>$PROJ_DIR$\..\12_Hello_AutoWakeUp\main.c</file>
+      <file>$PROJ_DIR$\..\11_HelloADC\ClockUartLed.h</file>
+      <file>$PROJ_DIR$\WS2812B.h</file>
+      <file>$PROJ_DIR$\WS2812B.c</file>
+      <file>$PROJ_DIR$\ClockUartLed.c</file>
+      <file>$PROJ_DIR$\..\14_Hello_I2C_Slave\i2c.c</file>
+      <file>$PROJ_DIR$\Debug\List\WS2812B.lst</file>
+      <file>$PROJ_DIR$\Debug\List\ClockUartLed.lst</file>
+      <file>$PROJ_DIR$\Debug\Obj\06_Hello_RGBLeds_24BitsParam.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\WS2812B.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\WS2812B.o</file>
     </outputs>
-    <file>
-      <name>$PROJ_DIR$\hello_leds_24bits.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 6 5</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 8</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 0 3</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 3 0</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\06_Hello_RGBLeds_24BitsParam.out</name>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 9 5 10 4</file>
-        </tool>
-      </inputs>
-    </file>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 7</file>
+          <file> 0 12</file>
         </tool>
       </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\06_Hello_RGBLeds_24BitsParam.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 8 23 7 25 9 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hello_leds_24bits.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 6 7</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 4 11 10 15</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 4 5 11 10 15</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\WS2812B.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 19 25</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 10 4 5 15</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 15 11 4 5 10</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ClockUartLed.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 20 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 10 4</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 10 4 5</file>
+        </tool>
+      </inputs>
     </file>
   </configuration>
   <configuration>
