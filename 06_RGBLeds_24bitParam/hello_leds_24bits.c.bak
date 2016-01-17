@@ -49,8 +49,8 @@ void TestColors()
   SwitchOffLed();
   delay_1ms_Count(500);
   //replay the Flash strange in slow motion
-  RampColors(5,0,0,1,20,100,0);
-  RampColors(5,0,0,2,20,100,0);
+  RampColors(10,0,0,1,20,100,0);
+  RampColors(10,0,0,2,20,100,0);
   SwitchOffLed();
 }
 
@@ -65,40 +65,15 @@ int main( void )
 	
 	InitialiseUART();
 	
-	RGBLeds_PIO_Init();
+	RGBLeds_PIO_Init_A2();
 
         SwitchOffLed();//Switch Off on startup
         
-	UARTPrintf("Hello from my RGB Leds on Pin A "); 
-        UARTPrintf_uint(RGBLedPIN_A);
-        UARTPrintf(" ...\n\r");
-
-        RGB_SwitchOff(0,60);
-        
-        TestColors();//Flashing colors on one led
-        
-        RGBColor_t ColorStart, ColorEnd;
-        ColorStart = GREEN;
-        ColorEnd = RED;
+	UARTPrintf("Hello from my RGB Leds on Pin A2....\n\r");
 
 	while (1)
 	{
-          UARTPrintf("Color Loop. GREEN to BLUE then to RED \r\n"); 
-          for(int t=0;t<256;t++)
-          {
-            ColorStart = GREEN;
-            ColorEnd = ColorScale(t,256,BLUE,RED);
-            ShadeLeds(0,60,ColorStart,ColorEnd);
-            SendLedsArray();
-            delay_1ms_Count(20);
-          }
-          for(int t=0;t<256;t++)
-          {
-            ColorStart = GREEN;
-            ColorEnd = ColorScale(t,256,RED,BLUE);
-            ShadeLeds(0,60,ColorStart,ColorEnd);
-            SendLedsArray();
-            delay_1ms_Count(20);
-          }
+          TestColors();
+          delay_1ms_Count(6000);
 	}
 }
