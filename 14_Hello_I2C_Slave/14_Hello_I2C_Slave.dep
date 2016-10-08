@@ -6,56 +6,47 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\..\13_Hello_I2C_Master\ClockUartLed.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\i2c.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\i2c.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
-      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\14_Hello_I2C_Slave.pbd</file>
-      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-      <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
-      <file>$PROJ_DIR$\Debug\List\14_Hello_I2C_Slave.map</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.pbi</file>
-      <file>$PROJ_DIR$\Debug\Exe\14_Hello_I2C_Slave.out</file>
-      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Slave.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Slave.pbi</file>
-      <file>$PROJ_DIR$\..\13_Hello_I2C_Master\ClockUartLed.c</file>
+      <file>$PROJ_DIR$\i2c.c</file>
       <file>$PROJ_DIR$\main_i2c_Slave.c</file>
       <file>$PROJ_DIR$\ClockUartLed.c</file>
-      <file>$PROJ_DIR$\..\11_HelloADC\ClockUartLed.c</file>
-      <file>$PROJ_DIR$\..\06_RGBLeds_24bitParam\WS2812B.c</file>
-      <file>$PROJ_DIR$\ClockUartLed.h</file>
-      <file>$PROJ_DIR$\..\06_RGBLeds_24bitParam\hello_leds_24bits.c</file>
-      <file>$PROJ_DIR$\commonTypes.h</file>
-      <file>$PROJ_DIR$\..\13_Hello_I2C_Master\main_i2c_Master.c</file>
-      <file>$PROJ_DIR$\..\11_HelloADC\main.c</file>
-      <file>$PROJ_DIR$\i2c.c</file>
       <file>$PROJ_DIR$\i2c.h</file>
+      <file>$PROJ_DIR$\commonTypes.h</file>
+      <file>$PROJ_DIR$\ClockUartLed.h</file>
+      <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.o</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Slave.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\List\14_Hello_I2C_Slave.map</file>
+      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\i2c.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\i2c.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Slave.o</file>
+      <file>$PROJ_DIR$\Debug\Exe\14_Hello_I2C_Slave.out</file>
+      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
     </outputs>
     <file>
-      <name>[ROOT_NODE]</name>
+      <name>$PROJ_DIR$\i2c.c</name>
       <outputs>
         <tool>
-          <name>ILINK</name>
-          <file> 12 9</file>
+          <name>BICOMP</name>
+          <file> 14</file>
         </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\14_Hello_I2C_Slave.out</name>
-      <outputs>
         <tool>
-          <name>ILINK</name>
-          <file> 9</file>
+          <name>ICCSTM8</name>
+          <file> 15</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ILINK</name>
-          <file> 8 13 2 14 10 7</file>
+          <name>BICOMP</name>
+          <file> 18 5 4 3 13</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 3 4 5 18 13</file>
         </tool>
       </inputs>
     </file>
@@ -64,21 +55,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 15</file>
+          <file> 10</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 14</file>
+          <file> 16</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 27 5 21 1 23 4</file>
+          <file> 3 13 5 11 4 18</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 4 5 1 21 23 27</file>
+          <file> 18 13 11 5 4 3</file>
         </tool>
       </inputs>
     </file>
@@ -87,44 +78,45 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 11</file>
+          <file> 9</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 13</file>
+          <file> 7</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5 21 4</file>
+          <file> 13 5 18</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 21 4 5</file>
+          <file> 5 18 13</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\i2c.c</name>
+      <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 3</file>
+          <name>ILINK</name>
+          <file> 12 17</file>
         </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\14_Hello_I2C_Slave.out</name>
+      <outputs>
         <tool>
-          <name>ICCSTM8</name>
-          <file> 2</file>
+          <name>ILINK</name>
+          <file> 12</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 4 21 23 27 5</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 27 23 21 4 5</file>
+          <name>ILINK</name>
+          <file> 6 7 15 16 8 19</file>
         </tool>
       </inputs>
     </file>

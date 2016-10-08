@@ -155,6 +155,7 @@ int main( void )
       {
         delay(60000);
       }
+      UARTPrintf("STM8S Ping...\n\r");
       //On
       PB_ODR_bit.ODR5 = 0;
       delay(10000);

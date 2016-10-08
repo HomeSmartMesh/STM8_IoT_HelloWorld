@@ -18,6 +18,7 @@
 
 #include "commonTypes.h"
 #include "ClockUartLed.h"
+
 #include "WS2812B.h"
 
 void TestColors()
@@ -54,6 +55,53 @@ void TestColors()
   SwitchOffLed();
 }
 
+void Loop60LedsBlueRedBlue()
+{
+    RGBColor_t ColorStart, ColorEnd;
+    ColorStart = GREEN;
+    ColorEnd = RED;
+    UARTPrintf("Color Loop. 60 Leds GREEN to BLUE then to RED \r\n"); 
+    for(int t=0;t<256;t++)
+    {
+      ColorStart = GREEN;
+      ColorEnd = ColorScale(t,256,BLUE,RED);
+      ShadeLeds(0,60,ColorStart,ColorEnd);
+      SendLedsArray();
+      delay_1ms_Count(20);
+    }
+    for(int t=0;t<256;t++)
+    {
+      ColorStart = GREEN;
+      ColorEnd = ColorScale(t,256,RED,BLUE);
+      ShadeLeds(0,60,ColorStart,ColorEnd);
+      SendLedsArray();
+      delay_1ms_Count(20);
+    }
+}
+
+void Loop3LedsBlueRedBlue()
+{
+    RGBColor_t ColorStart, ColorEnd;
+    ColorStart = GREEN;
+    ColorEnd = RED;
+    UARTPrintf("Color Loop. 3 Leds GREEN to BLUE then to RED \r\n"); 
+    for(int t=0;t<256;t++)
+    {
+      ColorStart = GREEN;
+      ColorEnd = ColorScale(t,256,BLUE,RED);
+      ShadeLeds(0,3,ColorStart,ColorEnd);
+      SendLedsArray();
+      delay_1ms_Count(4);
+    }
+    for(int t=0;t<256;t++)
+    {
+      ColorStart = GREEN;
+      ColorEnd = ColorScale(t,256,RED,BLUE);
+      ShadeLeds(0,3,ColorStart,ColorEnd);
+      SendLedsArray();
+      delay_1ms_Count(4);
+    }
+}
 
 int main( void )
 {
@@ -75,30 +123,11 @@ int main( void )
 
         RGB_SwitchOff(0,60);
         
-        TestColors();//Flashing colors on one led
+        //TestColors();//Flashing colors on one led
         
-        RGBColor_t ColorStart, ColorEnd;
-        ColorStart = GREEN;
-        ColorEnd = RED;
-
+          
 	while (1)
 	{
-          UARTPrintf("Color Loop. GREEN to BLUE then to RED \r\n"); 
-          for(int t=0;t<256;t++)
-          {
-            ColorStart = GREEN;
-            ColorEnd = ColorScale(t,256,BLUE,RED);
-            ShadeLeds(0,60,ColorStart,ColorEnd);
-            SendLedsArray();
-            delay_1ms_Count(20);
-          }
-          for(int t=0;t<256;t++)
-          {
-            ColorStart = GREEN;
-            ColorEnd = ColorScale(t,256,RED,BLUE);
-            ShadeLeds(0,60,ColorStart,ColorEnd);
-            SendLedsArray();
-            delay_1ms_Count(20);
-          }
+          Loop3LedsBlueRedBlue();
 	}
 }

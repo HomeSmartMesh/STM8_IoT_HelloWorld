@@ -6,43 +6,48 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Master.pbi</file>
-      <file>$PROJ_DIR$\Debug\Exe\13_Hello_I2C_Master.out</file>
-      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Master.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\13_Hello_I2C_Master.pbd</file>
-      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
-      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
-      <file>$TOOLKIT_DIR$\config\lnkstm8.icf</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-      <file>$PROJ_DIR$\i2c.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\i2c.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\i2c.pbi</file>
       <file>$PROJ_DIR$\Debug\List\13_Hello_I2C_Master.map</file>
       <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
-      <file>$PROJ_DIR$\..\14_Hello_I2C_Slave\i2c.c</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+      <file>$PROJ_DIR$\Debug\Exe\13_Hello_I2C_Master.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\i2c.o</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\i2c.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.pbi</file>
+      <file>$PROJ_DIR$\i2c.c</file>
+      <file>$PROJ_DIR$\i2c.h</file>
       <file>$PROJ_DIR$\ClockUartLed.h</file>
       <file>$PROJ_DIR$\ClockUartLed.c</file>
-      <file>$PROJ_DIR$\main_i2c_Master.c</file>
       <file>$PROJ_DIR$\commonTypes.h</file>
-      <file>$PROJ_DIR$\i2c.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\..\14_Hello_I2C_Slave\main_i2c_Slave.c</file>
+      <file>$PROJ_DIR$\main_i2c_Master.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Master.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\main_i2c_Master.pbi</file>
     </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 0 3</file>
+        </tool>
+      </outputs>
+    </file>
     <file>
       <name>$PROJ_DIR$\Debug\Exe\13_Hello_I2C_Master.out</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 14</file>
+          <file> 0</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 15 4 12 3 9 10</file>
+          <file> 1 4 5 18 6 2</file>
         </tool>
       </inputs>
     </file>
@@ -51,39 +56,30 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 13</file>
+          <file> 8</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 12</file>
+          <file> 5</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 6 17 20 21 7</file>
+          <file> 10 14 16 13 7</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 21 20 17 6 7</file>
+          <file> 13 16 14 10 7</file>
         </tool>
       </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 1 14</file>
-        </tool>
-      </outputs>
     </file>
     <file>
       <name>$PROJ_DIR$\ClockUartLed.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 2</file>
+          <file> 11</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
@@ -93,11 +89,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 7 17 6</file>
+          <file> 7 14 10</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 17 6 7</file>
+          <file> 14 10 7</file>
         </tool>
       </inputs>
     </file>
@@ -106,21 +102,21 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 0</file>
+          <file> 19</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 3</file>
+          <file> 18</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21 17 22 20 7 6</file>
+          <file> 13 14 9 16 7 10</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 6 7 22 17 20 21</file>
+          <file> 10 7 9 14 16 13</file>
         </tool>
       </inputs>
     </file>

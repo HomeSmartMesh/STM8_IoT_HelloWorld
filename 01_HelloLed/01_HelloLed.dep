@@ -7,23 +7,39 @@
     <name>Debug</name>
     <outputs>
       <file>$PROJ_DIR$\Debug\Exe\01_HelloLed.hex</file>
-      <file>$PROJ_DIR$\Debug\Obj\hello_led.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\templproj.map</file>
       <file>$PROJ_DIR$\Debug\Obj\hello_led.o</file>
       <file>$PROJ_DIR$\hello_led.c</file>
       <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
+      <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
+      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hello_led.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+      <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
     </outputs>
     <file>
       <name>$PROJ_DIR$\hello_led.c</name>
       <outputs>
         <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+        <tool>
           <name>ICCSTM8</name>
           <file> 2</file>
         </tool>
+      </outputs>
+      <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 1</file>
+          <file> 5 6</file>
         </tool>
-      </outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 6 5</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\Debug\Exe\templproj.out</name>
@@ -32,21 +48,27 @@
           <name>OBJCOPY</name>
           <file> 0</file>
         </tool>
+        <tool>
+          <name>ILINK</name>
+          <file> 1</file>
+        </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 9 2 10 8</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 4</file>
+          <file> 1 4</file>
         </tool>
       </outputs>
     </file>
-    <forcedrebuild>
-      <name>[MULTI_TOOL]</name>
-      <tool>ILINK</tool>
-    </forcedrebuild>
   </configuration>
   <configuration>
     <name>Release</name>

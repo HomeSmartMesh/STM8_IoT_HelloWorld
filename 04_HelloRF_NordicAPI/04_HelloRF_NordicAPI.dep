@@ -6,92 +6,50 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$PROJ_DIR$\nRF_LowLevel.c</file>
+      <file>$PROJ_DIR$\Debug\List\templproj.map</file>
+      <file>$PROJ_DIR$\nRF_SPI.h</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
       <file>$PROJ_DIR$\Debug\Obj\nRF_LowLevel.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_SPI.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.pbi</file>
+      <file>$PROJ_DIR$\ClockUartLed.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\nRF_LowLevel.h</file>
+      <file>$PROJ_DIR$\ClockUartLed.h</file>
+      <file>$PROJ_DIR$\nRF_SPI.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
       <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
       <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.pbi</file>
-      <file>$PROJ_DIR$\nRF_SPI.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\nRF_SPI.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\ClockUartLed.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\nRF_LowLevel.o</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
       <file>$PROJ_DIR$\Debug\Exe\04_HelloRF_NordicAPI.hex</file>
-      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.o</file>
-      <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\nRF_SPI.pbi</file>
-      <file>$PROJ_DIR$\ClockUartLed.h</file>
-      <file>$PROJ_DIR$\nRF_LowLevel.c</file>
-      <file>$PROJ_DIR$\nRF_LowLevel.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_SPI.o</file>
       <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
-      <file>$PROJ_DIR$\main.c</file>
-      <file>$PROJ_DIR$\nRF_SPI.c</file>
-      <file>$PROJ_DIR$\Debug\List\templproj.map</file>
+      <file>$PROJ_DIR$\Debug\Obj\nRF_LowLevel.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ClockUartLed.o</file>
     </outputs>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\templproj.out</name>
-      <outputs>
-        <tool>
-          <name>OBJCOPY</name>
-          <file> 11</file>
-        </tool>
-        <tool>
-          <name>ILINK</name>
-          <file> 22</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 2 12 7 9 6 10 3</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\ClockUartLed.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 12</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 4</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 13 19</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 19 13</file>
-        </tool>
-      </inputs>
-    </file>
     <file>
       <name>$PROJ_DIR$\nRF_LowLevel.c</name>
       <outputs>
         <tool>
-          <name>ICCSTM8</name>
-          <file> 9</file>
+          <name>BICOMP</name>
+          <file> 6</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 1</file>
+          <name>ICCSTM8</name>
+          <file> 21</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICCSTM8</name>
-          <file> 13 19 18</file>
+          <name>BICOMP</name>
+          <file> 20 5 11</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 19 13 18</file>
+          <name>ICCSTM8</name>
+          <file> 5 20 11</file>
         </tool>
       </inputs>
     </file>
@@ -99,22 +57,45 @@
       <name>$PROJ_DIR$\main.c</name>
       <outputs>
         <tool>
-          <name>ICCSTM8</name>
-          <file> 7</file>
+          <name>BICOMP</name>
+          <file> 10</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 14</file>
+          <name>ICCSTM8</name>
+          <file> 15</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICCSTM8</name>
-          <file> 16 5</file>
+          <name>BICOMP</name>
+          <file> 3 12</file>
         </tool>
         <tool>
+          <name>ICCSTM8</name>
+          <file> 12 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\ClockUartLed.c</name>
+      <outputs>
+        <tool>
           <name>BICOMP</name>
-          <file> 5 16</file>
+          <file> 8</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 22</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 5</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 5 20</file>
         </tool>
       </inputs>
     </file>
@@ -122,22 +103,41 @@
       <name>$PROJ_DIR$\nRF_SPI.c</name>
       <outputs>
         <tool>
-          <name>ICCSTM8</name>
-          <file> 6</file>
+          <name>BICOMP</name>
+          <file> 7</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 15</file>
+          <name>ICCSTM8</name>
+          <file> 19</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICCSTM8</name>
-          <file> 5 18</file>
+          <name>BICOMP</name>
+          <file> 11 3</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 18 5</file>
+          <name>ICCSTM8</name>
+          <file> 3 11</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\templproj.out</name>
+      <outputs>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>ILINK</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 16 22 15 21 19 0 17</file>
         </tool>
       </inputs>
     </file>
@@ -146,7 +146,7 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 0 22</file>
+          <file> 2 14</file>
         </tool>
       </outputs>
     </file>

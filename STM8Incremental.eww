@@ -40,6 +40,30 @@
   <project>
     <path>$WS_DIR$\14_Hello_I2C_Slave\14_Hello_I2C_Slave.ewp</path>
   </project>
+  <project>
+    <path>$WS_DIR$\15_Hello_STM8L_Signal\15_Hello_STM8L_Signal.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\16_HelloTrainUart\16_HelloTrainUart.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\17_STM8L_UART_HelloRF\17_STM8L_UART_HelloRF.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\18_STM8L_HelloI2C\18_STM8L_HelloI2C.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\19_STM8L_Hello_Battery\19_STM8L_Hello_Battery.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\20_Hello_LightDimmer\20_Hello_LightDimmer.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\21_STM8L_Hello_LowPower\21_STM8L_Hello_LowPower.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\22_Hello_AmbientLight_BH1750\22_Hello_AmbientLight_BH1750.ewp</path>
+  </project>
   <batchBuild/>
 </workspace>
 

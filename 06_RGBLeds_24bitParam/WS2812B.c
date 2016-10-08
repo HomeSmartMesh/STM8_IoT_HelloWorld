@@ -422,6 +422,15 @@ void SendLedColor(BYTE R, BYTE G, BYTE B)
   delay_100us();//minimal delay for reset to restart the same color is 50 us
 }
 
+void SendLedColor(RGBColor_t Color)
+{
+  LedsArray[0] = Color.G;
+  LedsArray[1] = Color.R;
+  LedsArray[2] = Color.B;
+  SendLedsArray();
+  delay_100us();//minimal delay for reset to restart the same color is 50 us
+}
+
 void RGB_SwitchOff(BYTE first,BYTE NbLeds)
 {
 	for(BYTE i=first;i<NbLeds;i++)

@@ -19,29 +19,85 @@
 //for delay
 #include "ClockUartLed.h"
 
+//-----------------------------nRF_Modes configuration section-----------------------------
+// set to true or false
+#define Enable_Debug_nRF_Config 		false
+#define Enable_Debug_nRF_SetMode_RX		false
+
+//disable auto acknowledgement for all pipes
+#define SPI_Write_Register_EN_AA		0x00
+//disable retransmission
+#define SPI_Write_Register_SETUP_RETR	0x00
+//Sets the Pipe 0 width
+#define SPI_Write_Register_RX_PW_P0		0x01
+
+//add the mask to the or bits to disable it. Masks are : bit_MASK_RX_DR | bit_MASK_TX_DS | bit_MASK_MAX_RT
+#define nRF_Config_Interruptions_Mask_Set	(bit_MASK_RX_DR | bit_MASK_TX_DS | bit_MASK_MAX_RT)
+#define nRF_Config_Interruptions_Mask_ReSet	(bit_neg_EN_CRC)
+
+
+//----------------------------------------------------------------------------------------
+#if (Enable_Debug_nRF_Config == true)
+#define nRF_Config_Printf 		UARTPrintf
+#define nRF_Config_PrintfHex	UARTPrintfHex
+#define nRF_Config_PrintStatus	nRF_PrintStatus
+#else
+#define nRF_Config_Printf 		
+#define nRF_Config_PrintfHex	
+#define nRF_Config_PrintStatus
+#endif
+
+#if (Enable_Debug_nRF_SetMode_RX == true)
+#define nRF_SetMode_RX_Printf 		UARTPrintf
+#define nRF_SetMode_RX_PrintfHex	UARTPrintfHex
+#define nRF_SetMode_RX_PrintStatus	nRF_PrintStatus
+#else
+#define nRF_SetMode_RX_Printf 		
+#define nRF_SetMode_RX_PrintfHex	
+#define nRF_SetMode_RX_PrintStatus
+#endif
+
+//----------------------------------------------------------------------------------------
+
 
 BYTE nRF_Mode = nRF_Mode_Uninitialised;
-BYTE ConfigVal = 0;
 
 //Waiting power on reset and initialising SPI
 BYTE nRF_Config()
 {
 	BYTE status;
+	BYTE ConfigVal = 0;
 	
-	SPI_Write_Register(EN_AA,0x00);//disable auto acknowledgement for all pipes
-	SPI_Write_Register(SETUP_RETR,0x00);//disable retransmission
-
-	SPI_Write_Register(RX_PW_P0,0x01);//set pipe 0 width to 1
+	SPI_Write_Register(EN_AA,SPI_Write_Register_EN_AA);//disable auto acknowledgement for all pipes
+	SPI_Write_Register(SETUP_RETR,SPI_Write_Register_SETUP_RETR);//disable retransmission
+	SPI_Write_Register(RX_PW_P0,SPI_Write_Register_RX_PW_P0);//set pipe 0 width to 1
 	
 	//read previous config so that PWR_UP stay unchanged
 	ConfigVal = SPI_Read_Register(CONFIG);
 	ConfigVal &= bit_Mask_Reserved;//whatever read on reserved, Only 0 is written
 	
 	//Mask the interrupts 
-	ConfigVal |= (bit_MASK_RX_DR | bit_MASK_TX_DS | bit_MASK_MAX_RT);
-	ConfigVal &= bit_neg_EN_CRC;
+	ConfigVal |= nRF_Config_Interruptions_Mask_Set;
+	ConfigVal &= nRF_Config_Interruptions_Mask_ReSet;
 	
 	status = SPI_Write_Register(CONFIG,ConfigVal);
+
+	nRF_Config_Printf("nRF_Config\n\rConfig updated with : ");
+	nRF_Config_PrintfHex(ConfigVal);
+	nRF_Config_Printf(" ; reread ");
+    ConfigVal = SPI_Read_Register(CONFIG);
+	nRF_Config_PrintfHex(ConfigVal);
+	nRF_Config_Printf(" ; ");
+	nRF_Config_PrintStatus(status);
+
+	if(		( status & (bit_RX_DR | bit_TX_DS | bit_MAX_RT) ) != 0	)
+	{
+		nRF_Config_Printf("Clearing the status, ");
+		nRF_ClearStatus();
+		nRF_Config_Printf("New ");
+        status = SPI_Read_Register(STATUS);		
+		nRF_Config_PrintStatus(status);
+	}
 	
 	return status;
 }
@@ -74,6 +130,7 @@ BYTE nRF_Init()
 BYTE nRF_SetMode_PowerDown()
 {
 	BYTE status;
+	BYTE ConfigVal = 0;
 	
 	if(nRF_Mode == nRF_Mode_Uninitialised)
 	{
@@ -103,6 +160,7 @@ BYTE nRF_SetMode_PowerDown()
 BYTE nRF_SetMode_Standby_I()
 {
 	BYTE status;
+	BYTE ConfigVal = 0;
 	
 	if(nRF_Mode == nRF_Mode_Uninitialised)
 	{
@@ -136,6 +194,8 @@ BYTE nRF_SetMode_Standby_I()
 BYTE nRF_SetMode_RX()
 {
 	BYTE status;
+	BYTE ConfigVal = 0;
+	
 	ConfigVal = SPI_Read_Register(CONFIG);
 
 	if((ConfigVal & bit_PWR_UP) == 0x00)//We are in Power Down mode, will have to set and wait 5ms
@@ -159,6 +219,18 @@ BYTE nRF_SetMode_RX()
 	
 	nRF_Mode = nRF_Mode_Rx;
 
+	//Debug section
+	nRF_SetMode_RX_Printf("SetMode_Rx: ");
+	nRF_SetMode_RX_Printf("Config updated with : ");
+	nRF_SetMode_RX_PrintfHex(ConfigVal);
+	nRF_SetMode_RX_Printf(" ; reread ");
+    ConfigVal = SPI_Read_Register(CONFIG);
+	nRF_SetMode_RX_PrintfHex(ConfigVal);
+	nRF_SetMode_RX_Printf(" ; ");
+	status = SPI_Read_Register(STATUS);			
+	nRF_SetMode_RX_PrintStatus(status);
+	
+	
 	return status;
 }
 
@@ -172,6 +244,8 @@ BYTE nRF_SetMode_RX()
 BYTE nRF_SetMode_TX()
 {
 	BYTE status,fifos;
+	BYTE ConfigVal = 0;
+
 	ConfigVal = SPI_Read_Register(CONFIG);
 
 	if((ConfigVal & bit_PWR_UP) == 0x00)//We are in Power Down mode, will have to set and wait 5ms
@@ -201,8 +275,8 @@ BYTE nRF_SetMode_TX()
 	return status;
 }
 
-BYTE nRF_ClearStatus()
+BYTE nRF_ClearStatus(BYTE flags)
 {
-	return SPI_Write_Register(STATUS,(bit_RX_DR | bit_TX_DS | bit_MAX_RT) );
+	return SPI_Write_Register(STATUS,flags);
 }
 
