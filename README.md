@@ -1,4 +1,11 @@
-# See this firmware in action [IoT_Frameworks (Sensor/Server/Client)](https://github.com/wassfila/IoT_Frameworks)
+# Status
+- This repository was used for a bringup of STM8 and STM8L projects, it is no longer maintained.
+- For a latest status of a working and tested library and examples, please check the [IoT_STM8](https://github.com/HomeSmartMesh/IoT_STM8) repository where all examples are using the same libraries under the root folder\libs
+
+
+# See this firmware in action 
+- [IoT_STM8](https://github.com/HomeSmartMesh/IoT_STM8) : working and tested firmware
+- [IoT_Frameworks (Sensor/Server/Client)](https://github.com/wassfila/IoT_Frameworks) : RF Network and raspberry pi environment
 
 # Hello world samples for the [STM8 IoT Boards](https://github.com/wassfila/STM8_IoT_Boards)
 This repository contains incremented projects that gradually cover hello world samples for :
